@@ -1,4 +1,0 @@
-#!/bin/bash
-
-#echo "unload the old soundflower"
-#kextunload -q /System/Library/Extensions/Soundflower.kext
