@@ -26,6 +26,8 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2005 ma++ ingalls | Copyright © 2014 Maciej Wilczyński [lupine.cc] &lt;maciej@lupine.cc&gt;</string>
 	<key>NSUIElement</key>
 	<integer>1</integer>
 </dict>
