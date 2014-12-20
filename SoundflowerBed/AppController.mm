@@ -613,7 +613,7 @@ MySleepCallBack(void * x, io_service_t y, natural_t messageType, void * messageA
 		[m2chMenu setImage:[NSImage imageNamed:@"sf2"]];
 		[m2chMenu setTarget:self];
 			NSMenu *submenu = [[NSMenu alloc] initWithTitle:@"2ch submenu"];
-			NSMenuItem *bufItem = [submenu addItemWithTitle:@"Buffer Size" action:@selector(doNothing) keyEquivalent:@""];
+			NSMenuItem *bufItem = [submenu addItemWithTitle:@"Buffer size" action:@selector(doNothing) keyEquivalent:@""];
 				m2chBuffer = [[NSMenu alloc] initWithTitle:@"2ch Buffer"];
 				item = [m2chBuffer addItemWithTitle:@"64" action:@selector(bufferSizeChanged2ch:) keyEquivalent:@""];
 				[item setTarget:self];	
@@ -675,7 +675,7 @@ MySleepCallBack(void * x, io_service_t y, natural_t messageType, void * messageA
 		}
 	}
 	else {
-		item = [mMenu addItemWithTitle:@"Soundflower Is Not Installed!!" action:NULL keyEquivalent:@""];
+		item = [mMenu addItemWithTitle:@"Soundflower is not installed!" action:NULL keyEquivalent:@""];
 		[item setTarget:self];
 	}
 	
@@ -688,7 +688,7 @@ MySleepCallBack(void * x, io_service_t y, natural_t messageType, void * messageA
 		[m16chMenu setImage:[NSImage imageNamed:@"sf16"]];
 		[m16chMenu setTarget:self];
 			NSMenu *submenu = [[NSMenu alloc] initWithTitle:@"16ch submenu"];
-				NSMenuItem *bufItem = [submenu addItemWithTitle:@"Buffer Size" action:@selector(doNothing) keyEquivalent:@""];
+				NSMenuItem *bufItem = [submenu addItemWithTitle:@"Buffer size" action:@selector(doNothing) keyEquivalent:@""];
 				m16chBuffer = [[NSMenu alloc] initWithTitle:@"16ch Buffer"];
 				item = [m16chBuffer addItemWithTitle:@"64" action:@selector(bufferSizeChanged16ch:) keyEquivalent:@""];
 				[item setTarget:self];	
@@ -769,16 +769,16 @@ MySleepCallBack(void * x, io_service_t y, natural_t messageType, void * messageA
 		[mMenu addItem:[NSMenuItem separatorItem]];
 	}
 	
-	item = [mMenu addItemWithTitle:@"Audio Setup..." action:@selector(doAudioSetup) keyEquivalent:@""];
+	item = [mMenu addItemWithTitle:@"Audio setup" action:@selector(doAudioSetup) keyEquivalent:@""];
 	[item setTarget:self];
 	
-	item = [mMenu addItemWithTitle:@"About Soundflowerbed..." action:@selector(doAbout) keyEquivalent:@""];
+	item = [mMenu addItemWithTitle:@"About SoundflowerBed" action:@selector(doAbout) keyEquivalent:@""];
 	[item setTarget:self];
     
 	// item = [mMenu addItemWithTitle:@"Hide Soundflowerbed" action:@selector(hideMenuItem) keyEquivalent:@""];
 	// [item setTarget:self];
 	
-	item = [mMenu addItemWithTitle:@"Quit Soundflowerbed" action:@selector(doQuit) keyEquivalent:@""];
+	item = [mMenu addItemWithTitle:@"Quit SoundflowerBed" action:@selector(doQuit) keyEquivalent:@""];
 	[item setTarget:self];
 
 	[mSbItem setMenu:mMenu];
@@ -1118,7 +1118,7 @@ MySleepCallBack(void * x, io_service_t y, natural_t messageType, void * messageA
 			[self outputDeviceSelected:[mMenu itemAtIndex:(m16StartIndex+index-m2StartIndex)]];
 	}
 	
-	CFNumberRef num = (CFNumberRef) CFPreferencesCopyAppValue(CFSTR("2ch Buffer Size"), kCFPreferencesCurrentApplication);
+	CFNumberRef num = (CFNumberRef) CFPreferencesCopyAppValue(CFSTR("2ch buffer size"), kCFPreferencesCurrentApplication);
 	if (num) {
 		UInt32 val;
 		CFNumberGetValue(num, kCFNumberLongType, &val);
@@ -1150,7 +1150,7 @@ MySleepCallBack(void * x, io_service_t y, natural_t messageType, void * messageA
 		}
 	}
 	
-	num = (CFNumberRef) CFPreferencesCopyAppValue(CFSTR("16ch Buffer Size"), kCFPreferencesCurrentApplication);
+	num = (CFNumberRef) CFPreferencesCopyAppValue(CFSTR("16ch buffer size"), kCFPreferencesCurrentApplication);
 	if (num) {
 		UInt32 val;
 		CFNumberGetValue(num, kCFNumberLongType, &val);	
@@ -1193,12 +1193,12 @@ MySleepCallBack(void * x, io_service_t y, natural_t messageType, void * messageA
 
 	UInt32 val = 64 << [m2chBuffer indexOfItem:mCur2chBufferSize];
 	CFNumberRef number = CFNumberCreate(kCFAllocatorSystemDefault, kCFNumberIntType, &val);
-	CFPreferencesSetAppValue(CFSTR("2ch Buffer Size"), number, kCFPreferencesCurrentApplication);
+	CFPreferencesSetAppValue(CFSTR("2ch buffer size"), number, kCFPreferencesCurrentApplication);
 	CFRelease(number);
 	
 	val = 64 << [m16chBuffer indexOfItem:mCur16chBufferSize];
 	number = CFNumberCreate(kCFAllocatorSystemDefault, kCFNumberIntType, &val);
-	CFPreferencesSetAppValue(CFSTR("16ch Buffer Size"), number, kCFPreferencesCurrentApplication);
+	CFPreferencesSetAppValue(CFSTR("16ch buffer size"), number, kCFPreferencesCurrentApplication);
 	CFRelease(number);		
 
 	CFPreferencesAppSynchronize(kCFPreferencesCurrentApplication);
