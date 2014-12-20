@@ -1121,8 +1121,10 @@ MySleepCallBack(void * x, io_service_t y, natural_t messageType, void * messageA
 	CFNumberRef num = (CFNumberRef) CFPreferencesCopyAppValue(CFSTR("2ch Buffer Size"), kCFPreferencesCurrentApplication);
 	if (num) {
 		UInt32 val;
-		CFNumberGetValue(num, kCFNumberLongType, &val);	
-		CFRelease(num);
+		CFNumberGetValue(num, kCFNumberLongType, &val);
+        if (num != nil) {
+            CFRelease(num);
+        }
 		
 		switch (val) {
 			case 64:
