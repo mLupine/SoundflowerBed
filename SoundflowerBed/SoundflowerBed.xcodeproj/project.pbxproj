@@ -29,7 +29,6 @@
 		222FE3490EBB6D9900FD13FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		222FE34A0EBB6D9900FD13FC /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F591DD8D0310AAC801FEEC38 /* CoreAudio.framework */; };
 		222FE34B0EBB6D9900FD13FC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E9CD2F08E78DA30024DA5B /* IOKit.framework */; };
-		52AE8A891A45AEC60049800F /* Soundflower.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52AE8A881A45AEC60049800F /* Soundflower.xcconfig */; };
 		EB6C9F5D175A3004003CD86F /* VolumeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6C9F5C175A3004003CD86F /* VolumeView.xib */; };
 		EB6C9F60175A3052003CD86F /* VolumeView.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6C9F5E175A3052003CD86F /* VolumeView.h */; };
 		EB6C9F61175A3052003CD86F /* VolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C9F5F175A3052003CD86F /* VolumeView.m */; };
@@ -40,7 +39,7 @@
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		222FE3510EBB6D9900FD13FC /* SoundflowerBed.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundflowerBed.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		222FE3510EBB6D9900FD13FC /* SoundflowerBed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundflowerBed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		229B366F0EDC1DB500623222 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
@@ -131,7 +130,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				222FE3510EBB6D9900FD13FC /* SoundflowerBed.temp_caseinsensitive_rename.app */,
+				222FE3510EBB6D9900FD13FC /* SoundflowerBed.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,9 +201,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		222FE3310EBB6D9900FD13FC /* SoundflowerBed.temp_caseinsensitive_rename */ = {
+		222FE3310EBB6D9900FD13FC /* SoundflowerBed */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 222FE34C0EBB6D9900FD13FC /* Build configuration list for PBXNativeTarget "SoundflowerBed.temp_caseinsensitive_rename" */;
+			buildConfigurationList = 222FE34C0EBB6D9900FD13FC /* Build configuration list for PBXNativeTarget "SoundflowerBed" */;
 			buildPhases = (
 				222FE3320EBB6D9900FD13FC /* Headers */,
 				222FE3390EBB6D9900FD13FC /* Resources */,
@@ -215,10 +214,10 @@
 			);
 			dependencies = (
 			);
-			name = SoundflowerBed.temp_caseinsensitive_rename;
+			name = SoundflowerBed;
 			productInstallPath = "$(HOME)/Applications";
 			productName = AudioThru;
-			productReference = 222FE3510EBB6D9900FD13FC /* SoundflowerBed.temp_caseinsensitive_rename.app */;
+			productReference = 222FE3510EBB6D9900FD13FC /* SoundflowerBed.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +226,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0610;
 			};
 			buildConfigurationList = 222FE2FF0EBB5DD500FD13FC /* Build configuration list for PBXProject "SoundflowerBed" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -240,7 +239,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				222FE3310EBB6D9900FD13FC /* SoundflowerBed.temp_caseinsensitive_rename */,
+				222FE3310EBB6D9900FD13FC /* SoundflowerBed */,
 			);
 		};
 /* End PBXProject section */
@@ -253,7 +252,6 @@
 				222FE33A0EBB6D9900FD13FC /* MainMenu.nib in Resources */,
 				222FE33B0EBB6D9900FD13FC /* InfoPlist.strings in Resources */,
 				222FE33C0EBB6D9900FD13FC /* sf16.tiff in Resources */,
-				52AE8A891A45AEC60049800F /* Soundflower.xcconfig in Resources */,
 				222FE33D0EBB6D9900FD13FC /* sf2.tiff in Resources */,
 				222FE33E0EBB6D9900FD13FC /* menuIcon.tiff in Resources */,
 				222FE33F0EBB6D9900FD13FC /* appIcon.icns in Resources */,
@@ -317,7 +315,7 @@
 		222FE34D0EBB6D9900FD13FC /* Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(SRCROOT)/../Build/InstallerRoot";
@@ -327,7 +325,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications/Soundflower;
-				PRODUCT_NAME = SoundflowerBed.temp_caseinsensitive_rename;
+				PRODUCT_NAME = SoundflowerBed;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -340,14 +338,14 @@
 		222FE34E0EBB6D9900FD13FC /* Deployment */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(SRCROOT)/../Build/InstallerRoot";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = /Applications/Soundflower;
-				PRODUCT_NAME = SoundflowerBed.temp_caseinsensitive_rename;
+				PRODUCT_NAME = SoundflowerBed;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -369,7 +367,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Development;
 		};
-		222FE34C0EBB6D9900FD13FC /* Build configuration list for PBXNativeTarget "SoundflowerBed.temp_caseinsensitive_rename" */ = {
+		222FE34C0EBB6D9900FD13FC /* Build configuration list for PBXNativeTarget "SoundflowerBed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				222FE34D0EBB6D9900FD13FC /* Development */,
