@@ -29,6 +29,7 @@
 		222FE3490EBB6D9900FD13FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		222FE34A0EBB6D9900FD13FC /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F591DD8D0310AAC801FEEC38 /* CoreAudio.framework */; };
 		222FE34B0EBB6D9900FD13FC /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E9CD2F08E78DA30024DA5B /* IOKit.framework */; };
+		52AE8A891A45AEC60049800F /* Soundflower.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 52AE8A881A45AEC60049800F /* Soundflower.xcconfig */; };
 		EB6C9F5D175A3004003CD86F /* VolumeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB6C9F5C175A3004003CD86F /* VolumeView.xib */; };
 		EB6C9F60175A3052003CD86F /* VolumeView.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6C9F5E175A3052003CD86F /* VolumeView.h */; };
 		EB6C9F61175A3052003CD86F /* VolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB6C9F5F175A3052003CD86F /* VolumeView.m */; };
@@ -40,12 +41,12 @@
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		222FE3510EBB6D9900FD13FC /* Soundflowerbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundflowerbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		22952B1E104EC967003AF61F /* Soundflower.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Soundflower.xcconfig; path = ../Source/Soundflower.xcconfig; sourceTree = SOURCE_ROOT; };
 		229B366F0EDC1DB500623222 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		52AE8A881A45AEC60049800F /* Soundflower.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Soundflower.xcconfig; sourceTree = "<group>"; };
 		C9CCA5E606ED143E0076FAC2 /* sf16.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = sf16.tiff; sourceTree = "<group>"; };
 		C9CCA5E706ED143E0076FAC2 /* sf2.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = sf2.tiff; sourceTree = "<group>"; };
 		C9CCA5E806ED143E0076FAC2 /* menuIcon.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = menuIcon.tiff; sourceTree = "<group>"; };
@@ -138,7 +139,7 @@
 		29B97314FDCFA39411CA2CEA /* AudioThru */ = {
 			isa = PBXGroup;
 			children = (
-				22952B1E104EC967003AF61F /* Soundflower.xcconfig */,
+				52AE8A881A45AEC60049800F /* Soundflower.xcconfig */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -252,6 +253,7 @@
 				222FE33A0EBB6D9900FD13FC /* MainMenu.nib in Resources */,
 				222FE33B0EBB6D9900FD13FC /* InfoPlist.strings in Resources */,
 				222FE33C0EBB6D9900FD13FC /* sf16.tiff in Resources */,
+				52AE8A891A45AEC60049800F /* Soundflower.xcconfig in Resources */,
 				222FE33D0EBB6D9900FD13FC /* sf2.tiff in Resources */,
 				222FE33E0EBB6D9900FD13FC /* menuIcon.tiff in Resources */,
 				222FE33F0EBB6D9900FD13FC /* appIcon.icns in Resources */,
@@ -314,7 +316,6 @@
 		};
 		222FE34D0EBB6D9900FD13FC /* Development */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22952B1E104EC967003AF61F /* Soundflower.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
@@ -338,7 +339,6 @@
 		};
 		222FE34E0EBB6D9900FD13FC /* Deployment */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22952B1E104EC967003AF61F /* Soundflower.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = YES;

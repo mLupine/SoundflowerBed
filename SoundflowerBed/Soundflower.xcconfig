@@ -1,0 +1,12 @@
+//
+//  Soundflower.xcconfig
+//  Soundflowerbed
+//
+//  Created by Maciej Wilczyński on 20/12/14.
+//
+//
+
+MACOSX_DEPLOYMENT_TARGET = 10.7
+MODULE_VERSION = 1.6.8
+
+NUM_CHANS = 64
