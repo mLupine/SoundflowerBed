@@ -24,6 +24,8 @@ Clone this project and compile SoundflowerBed using Xcode 6 or head over to the 
 
 * **Fixed for OS X Mavericks and Yosemite on 20 December 2014, by Maciej Wilczyński <maciej@lupine.cc>**
 
+* Tested working on macOS Sierra
+
 
 ##LICENSE
 
